@@ -1,11 +1,11 @@
-from CharacterSystem import CharacterSystem
-from HealthSystem import HealthSystem
-from WeaponSystem import WeaponSystem
 
-playerHealth = HealthSystem(5, 6)
-dagger = WeaponSystem("Dagger", 1)
-character = CharacterSystem("Ethan", playerHealth, dagger)
+from Systems import Character
+from Systems import Health
+from Systems import Weapon
 
-playerHealth.pmaxHealth()
-playerHealth.pcurrentHealth()
+healthBar = Health(5, 6)
+dagger = Weapon("Dagger", 1)
+character = Character("Ethan", healthBar, dagger)
+
+healthBar.printHealth()
 character.printCharacter()
